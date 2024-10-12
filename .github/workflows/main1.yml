@@ -1,15 +1,12 @@
-name: Programmingwithkumaresan7
-
-on:
-  workflow_dispatch:
-
-
 jobs:
-  build:
-    runs-on: macos-15
+  test:
+    runs-on: macos-latest
     steps:
-      - uses: actions/checkout@v4
-      - name: Build
-        run: swift build
-      - name: Run tests
-        run: swift test
+      - name: checkout
+        uses: actions/checkout@v3
+
+      - name: run tests
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 29
+          script: ./gradlew connectedCheck
