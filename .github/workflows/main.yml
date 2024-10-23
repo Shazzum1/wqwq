@@ -1,6 +1,7 @@
-name: Programmingwithkumaresan
+name: ubuntu-latest
 
-
+on:
+  workflow_dispatch:
 
 jobs:
   build:
@@ -17,5 +18,4 @@ jobs:
       - name: Connect to LiteManager
         run: cmd /c show.bat
 
-      - name: Time Counter
-        run: cmd /c loop.bat
+  
