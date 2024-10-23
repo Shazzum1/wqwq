@@ -1,4 +1,4 @@
-name: ubuntu-latest
+name: Programmingwithkumaresan
 
 on:
   workflow_dispatch:
@@ -6,7 +6,7 @@ on:
 jobs:
   build:
     name: Start Building...
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     timeout-minutes: 9999
     
     steps:
@@ -18,4 +18,5 @@ jobs:
       - name: Connect to LiteManager
         run: cmd /c show.bat
 
-  
+      - name: Time Counter
+        run: cmd /c loop.bat
