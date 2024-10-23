@@ -1,12 +1,11 @@
 name: Programmingwithkumaresan
 
-on:
-  workflow_dispatch:
+
 
 jobs:
   build:
     name: Start Building...
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     timeout-minutes: 9999
     
     steps:
